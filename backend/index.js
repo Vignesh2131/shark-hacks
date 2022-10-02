@@ -13,10 +13,12 @@ const myAuthorizer = require('./utils/authorizer');
 
 const User = require('./models/user');
 
+const { URI } = require('./utils/config');
+
 // const port = 3000
 // connect to the database
 async function main() {
-    await mongoose.connect('mongodb+srv://private_application:SbfvtOfvJyjZFoYy@cluster0.i6eur.mongodb.net/?retryWrites=true&w=majority')
+    await mongoose.connect(URI);
   }
   
 main()
